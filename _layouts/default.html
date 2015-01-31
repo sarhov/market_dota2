@@ -3,10 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>{% if page.title %} {{page.title}} | {{site.title}} {% else %} {{site.title}} {% endif %}</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   <link rel="stylesheet" href="{{site.baseurl}}css/style.css">
 </head>
 <body>
-    
+  <div class="b-wrap">
+    <div class="b-top-bar">
+
+      <div class="b-logo">
+        <a href="#" class="b-logo__link">
+          <img src="{{site.baseurl}}img/logo.png" alt="" class="b-logo__image b-logo__image_top">
+        </a>
+      </div>
+      <!-- /.b-logo -->
+
+      <div class="b-navigation b-navigation_top">
+        <ul class="b-navigation__list">
+          {% for link in site.data.navigation.top-bar %}
+          {% assign current = page.url | remove: '/' %}
+          <!-- {{current}} -->
+          <li class="b-navigation__item {% if link.url == current %} active {% endif %}">
+            <a href="{{site.baseurl}}{{link.url}}" class="link">{{link.title}}</a>
+          </li>
+          <!-- /.b-navigation__item -->
+          {% endfor %}
+        </ul>
+        <!-- /.b-navigation__list -->
+      </div>
+      <!-- /.b-navigation b-navigation_top -->
+
+      <div class="b-login">
+        <a href="#" class="b-login__link"></a>
+      </div>
+      <!-- /.b-login -->
+
+    </div>
+    <!-- /.b-top-bar -->
+  </div>
+  <!-- /.b-wrap -->
+
 
   
   <script src="{{site.baseurl}}js/functions.js"></script>

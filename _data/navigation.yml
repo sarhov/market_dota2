@@ -6,10 +6,16 @@
 
 #example for more than one menu in on navigation file
 top-bar:
-- title: 'menu item title'
-  url: 'menu_item_url'
-- title: 'menu_item_title'
-  url: 'menu_item_url'
+- title: 'купить'
+  url: '/buy.html'
+- title: 'продать'
+  url: '/sell.html'
+- title: 'как это работает'
+  url: '/how-works.html'
+- title: 'техподержка'
+  url: '/support.html'
+- title: 'скидки'
+  url: '/discounts.html'
 
 sidebar-links:
 - title: 'menu item title'
