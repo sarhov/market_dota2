@@ -276,6 +276,7 @@ body{
   position: relative;
   z-index: 2;
   padding-top: 25px;
+  padding-bottom: 100px;
 }
 
 .b-content{
@@ -309,14 +310,20 @@ body{
       margin-top: 1px;
       margin-right: -6px;
       background:transparent url('../img/widget-bg.png') center center no-repeat;
-    }
+    } 
   }
   &__content{
     padding: 13px 12px 12px 12px;
     line-height: 1;
   }
-  &:last-child:not(.b-widget_banner){
-    border-bottom: 1px solid #eaeaea;
+  &_banner{
+    border-top: 1px solid #eaeaea;
+  }
+}
+
+.b-banner{
+  &__img{
+    max-width: 100%;
   }
 }
 
