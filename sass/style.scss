@@ -95,13 +95,13 @@ body{
 }
 
 .b-top-bar{
-  height: 68px;
+  height: 66px;
   background:transparent url('../img/top-bar-bg.png') center top no-repeat;
 }
 
 .b-logo{
   float: left;
-   padding: 15px 0 0 12px;
+  padding: 15px 0 0 12px;
 }
 
 .b-navigation{
@@ -133,8 +133,8 @@ body{
 
 .b-login{
   float: right;
-margin-right: 1px;
-margin-top: 3px;
+  margin-right: 1px;
+  margin-top: 3px;
   &__link{
     display: block;
     width: 139px;
@@ -145,6 +145,76 @@ margin-top: 3px;
     }
     &:active, &:focus{
       background-position: left -124px;
+    }
+  }
+}
+
+.b-bar{
+  background:#f3f3f3;
+  height: 40px;
+  overflow: hidden;
+}
+
+@include keyframes(marquee) {
+  0%{
+    text-indent: 100%
+  }
+
+  100%{
+   text-indent: -100%;
+ }
+}
+
+.b-marquee{
+  // width: 700px;
+  height: 100%;
+  float: left;
+  &__title{
+    width: 110px;
+    float: left; 
+    height: 100%;
+    @extend .sharp;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 0 0 10px;
+    background:transparent url('../img/marquee-title-bg.png') left center no-repeat;
+  }
+  &__block{
+    width: 600px;
+    overflow: hidden;
+    float: left;
+    white-space: nowrap;
+    height: 100%;
+    line-height: 40px;
+
+  }
+  &__text{
+    font-size: 12px;
+    @extend .sharp;
+    @include animation(marquee 17s linear infinite);
+    color: #707070;
+  }
+}
+
+.b-social{
+  float: right;
+  padding-right: 3px;
+  padding-top: 1px;
+  &__link{
+    float: right;
+    margin-left: 3px;
+    width: 35px;
+    height: 37px;
+    @include transition(opacity 0.2s);
+    background:transparent url('../img/socials.png') left top no-repeat;
+    &_fb{
+     background-position: -39px 0;
+    }
+    &_twitter{
+     background-position: -77px 0;
+    }
+    &:hover{
+      opacity: 0.8;
     }
   }
 }
