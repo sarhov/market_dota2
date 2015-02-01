@@ -29,7 +29,7 @@
   font-style: normal;
 }
 /* line 25, ../sass/style.scss */
-.unisans, .b-navigation, .b-search__input-submit {
+.unisans, .b-navigation, .b-search__input-submit, .b-item__price {
   font-family: unisans, sans;
 }
 
@@ -85,7 +85,7 @@ a {
 }
 
 /* line 73, ../sass/style.scss */
-.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit {
+.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit, .b-item__title, .b-item__subtitle, .b-item__price {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -506,4 +506,81 @@ body {
   right: -1px;
   top: 0;
   width: 77px;
+}
+
+/* line 454, ../sass/style.scss */
+.b-items-wrap {
+  padding-top: 15px;
+  margin-left: -55px;
+}
+
+/* line 459, ../sass/style.scss */
+.b-item {
+  width: 172px;
+  margin-left: 55px;
+  float: left;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fafafa;
+  margin-bottom: 25px;
+  position: relative;
+}
+/* line 469, ../sass/style.scss */
+.b-item__image {
+  height: 105px;
+  position: relative;
+  margin: 0;
+}
+/* line 474, ../sass/style.scss */
+.b-item__img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 484, ../sass/style.scss */
+.b-item__main-link {
+  text-decoration: none;
+}
+/* line 487, ../sass/style.scss */
+.b-item__title {
+  background: #e75757;
+  text-align: center;
+  height: 27px;
+  line-height: 27px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 12px;
+}
+/* line 499, ../sass/style.scss */
+.b-item__subtitle {
+  height: 30px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  color: #1a1a1a;
+  font-size: 11px;
+  bottom: 7px;
+  width: 100%;
+  background: #dfdfdf;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 2px 1px;
+  z-index: 2;
+}
+/* line 515, ../sass/style.scss */
+.b-item__price {
+  position: absolute;
+  bottom: 40px;
+  left: 9px;
+  font-size: 35px;
+  color: #e75757;
+  z-index: 2;
 }
