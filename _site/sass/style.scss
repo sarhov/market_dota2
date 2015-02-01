@@ -89,6 +89,8 @@ a {
  color: #fff;  
 }
 
+
+
 // 
 // @TODO: Add docs to besans!
 //
@@ -454,6 +456,7 @@ body{
 .b-items-wrap{
   padding-top: 15px;
   margin-left: -55px;
+  padding-bottom: 25px;
 }
 
 .b-item{
@@ -524,4 +527,63 @@ body{
   z-index: 2;
  }
 
+}
+
+.b-more{
+  text-align: center;
+  &__link{
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -9999px;
+    background:transparent url('../img/more-bg.png') left top no-repeat;
+    &:hover{
+      background-position: 0 -52px;
+    }
+    &:active, &:focus{
+      background-position: 0 -104px;
+    }
+  }
+}
+
+.b-footer{
+  height: 195px;
+  background:#1a1a1a;
+  width: 100%;
+  padding: 10px 23px 0 23px;
+}
+
+.b-payments{
+  margin-bottom: 13px;
+  &__title{
+    color: #fff;
+   background:#2d2d2d;
+   border-radius: 3px;
+   text-align: center;
+   display: inline-block;
+   padding: 9px 35px;
+   line-height: 1;
+   @extend .unisans;
+   font-size: 14px;
+   margin-bottom: 15px;
+  }
+  &__link{
+    text-decoration: none;
+    margin-right: 16px;
+    @include transition(opacity 0.2s);
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+.b-copy{
+  padding-top: 13px;
+  border-top: 1px solid #2d2d2d;
+  &__text{
+    font-size: 12px;
+    color: #787878;
+    @extend .sharp;
+  }
 }
