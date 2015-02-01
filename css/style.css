@@ -29,7 +29,7 @@
   font-style: normal;
 }
 /* line 25, ../sass/style.scss */
-.unisans, .b-navigation, .b-search__input-submit, .b-item__price, .b-payments__title, .b-product__title, .b-more-items__title-text {
+.unisans, .b-navigation, .b-search__input-submit, .b-item__price, .b-payments__title, .b-product__title, .b-more-items__title-text, .b-page-title__text, .b-page-action__link {
   font-family: unisans, sans;
 }
 
@@ -90,7 +90,7 @@ figure {
 }
 
 /* line 77, ../sass/style.scss */
-.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit, .b-item__title, .b-item__subtitle, .b-item__price, .b-copy__text, .b-more-items__title-text, .b-small-item__price, .b-small-item__time {
+.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit, .b-item__title, .b-item__subtitle, .b-item__price, .b-copy__text, .b-more-items__title-text, .b-small-item__price, .b-small-item__time, .b-page-title__text, .b-page-action__link {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -800,4 +800,64 @@ body {
 .b-small-item__time {
   left: 7px;
   bottom: 7px;
+}
+
+/* line 715, ../sass/style.scss */
+.b-page-bar {
+  margin-bottom: 15px;
+}
+
+/* line 719, ../sass/style.scss */
+.b-key-icon {
+  width: 67px;
+  height: 55px;
+  display: block;
+  display: inline-block;
+  margin-bottom: -10px;
+  margin-top: -5px;
+  float: left;
+  margin-top: -9px;
+  background: transparent url("../img/keys-bg.png") center center no-repeat;
+}
+
+/* line 732, ../sass/style.scss */
+.b-page-title {
+  float: left;
+}
+/* line 734, ../sass/style.scss */
+.b-page-title__text {
+  height: 34px;
+  line-height: 34px;
+  color: #f3f3f3;
+  font-size: 18px;
+  padding: 0 10px;
+  border-radius: 0 4px 4px 0;
+  background: transparent url("../img/page-title-bg.png") left top no-repeat;
+}
+
+/* line 747, ../sass/style.scss */
+.b-page-action {
+  float: right;
+  text-align: right;
+}
+/* line 750, ../sass/style.scss */
+.b-page-action__link {
+  text-align: left;
+  text-decoration: none;
+  height: 34px;
+  padding: 0 10px;
+  line-height: 34px;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  background: transparent url("../img/page-action-bg.png") left top no-repeat;
+  border-radius: 0 4px 4px 0;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+/* line 764, ../sass/style.scss */
+.b-page-action__link:hover {
+  opacity: 0.8;
 }
