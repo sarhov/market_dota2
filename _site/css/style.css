@@ -29,7 +29,7 @@
   font-style: normal;
 }
 /* line 25, ../sass/style.scss */
-.unisans {
+.unisans, .b-navigation {
   font-family: unisans, sans;
 }
 
@@ -43,46 +43,118 @@ a {
   outline: 0;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
+.sharp, .b-navigation__link {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 40, ../sass/style.scss */
 ::-webkit-input-placeholder {
   color: #fff;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 :-ms-input-placeholder {
   color: #fff;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 html {
   height: 100%;
   overflow: auto;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 body {
   min-height: 100%;
   font-family: Tahoma, sans;
+  height: 100%;
   background: #6f6c67 url("../img/bg.png") center top/cover;
   color: #fff;
   padding: 30px 0 17px 0;
 }
 
-/* line 86, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .b-wrap {
   min-height: 100%;
-  width: 1200px;
+  width: 1198px;
   margin: auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* line 97, ../sass/style.scss */
+.b-top-bar {
+  height: 68px;
+  background: transparent url("../img/top-bar-bg.png") center top no-repeat;
+}
+
+/* line 102, ../sass/style.scss */
+.b-logo {
+  float: left;
+  padding: 15px 0 0 12px;
+}
+
+/* line 107, ../sass/style.scss */
+.b-navigation {
+  float: left;
+  margin-left: 50px;
+  padding-top: 25px;
+}
+/* line 112, ../sass/style.scss */
+.b-navigation__item {
+  margin-right: 15px;
+  float: left;
+}
+/* line 115, ../sass/style.scss */
+.b-navigation__item:not(:first-child):before {
+  content: ' ';
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-right: 10px;
+  background: transparent url("../img/dottes.png") center center no-repeat;
+}
+/* line 124, ../sass/style.scss */
+.b-navigation__link {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 128, ../sass/style.scss */
+.b-navigation__link:hover {
+  color: #e6e6e6;
+}
+
+/* line 134, ../sass/style.scss */
+.b-login {
+  float: right;
+  margin-right: 1px;
+  margin-top: 3px;
+}
+/* line 138, ../sass/style.scss */
+.b-login__link {
+  display: block;
+  width: 139px;
+  height: 62px;
+  background: transparent url("../img/login.png") left top no-repeat;
+}
+/* line 143, ../sass/style.scss */
+.b-login__link:hover {
+  background-position: left -62px;
+}
+/* line 146, ../sass/style.scss */
+.b-login__link:active, .b-login__link:focus {
+  background-position: left -124px;
 }

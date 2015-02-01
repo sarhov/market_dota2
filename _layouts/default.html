@@ -18,12 +18,12 @@
       <!-- /.b-logo -->
 
       <div class="b-navigation b-navigation_top">
-        <ul class="b-navigation__list">
+        <ul class="b-navigation__list clearfix">
           {% for link in site.data.navigation.top-bar %}
           {% assign current = page.url | remove: '/' %}
           <!-- {{current}} -->
           <li class="b-navigation__item {% if link.url == current %} active {% endif %}">
-            <a href="{{site.baseurl}}{{link.url}}" class="link">{{link.title}}</a>
+            <a href="{{site.baseurl}}{{link.url}}" class="b-navigation__link">{{link.title}}</a>
           </li>
           <!-- /.b-navigation__item -->
           {% endfor %}
@@ -42,8 +42,7 @@
   </div>
   <!-- /.b-wrap -->
 
-
-  
   <script src="{{site.baseurl}}js/functions.js"></script>
 </body>
 </html>
+

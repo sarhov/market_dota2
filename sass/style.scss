@@ -34,6 +34,8 @@ a {
  outline: 0;
 }
 
+.sharp{text-shadow: 0 0 1px rgba(0,0,0,0.3);}
+
 
 ::-webkit-input-placeholder {
  color: #fff;
@@ -77,6 +79,7 @@ html{
 body{
   min-height: 100%;
   font-family: Tahoma, sans;
+  height: 100%;
   // font-size: 14px;
   background:#6f6c67 url('../img/bg.png') center top/cover;
   color: #fff;
@@ -84,7 +87,64 @@ body{
 }
 
 .b-wrap{ 
-  min-height: 100%;
-  width: 1200px;
+  min-height: 100%; 
+  width: 1198px;
   margin: auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.b-top-bar{
+  height: 68px;
+  background:transparent url('../img/top-bar-bg.png') center top no-repeat;
+}
+
+.b-logo{
+  float: left;
+   padding: 15px 0 0 12px;
+}
+
+.b-navigation{
+  float: left;
+  @extend .unisans;
+  margin-left: 50px;
+  padding-top: 25px;
+  &__item{
+    margin-right: 15px;
+    float: left;
+    &:not(:first-child):before{
+      content: ' ';
+      display: inline-block;
+      width: 11px;
+      height: 10px;
+      margin-right: 10px;
+      background:transparent url('../img/dottes.png') center center no-repeat;
+    }
+  }
+  &__link{
+    color: #fff;
+    text-decoration: none;
+    @extend .sharp;
+    &:hover{
+      color: darken(#fff, 10%);
+    }
+  }
+}
+
+.b-login{
+  float: right;
+margin-right: 1px;
+margin-top: 3px;
+  &__link{
+    display: block;
+    width: 139px;
+    height: 62px;
+    background:transparent url('../img/login.png') left top no-repeat;
+    &:hover{
+      background-position: left -62px;
+    }
+    &:active, &:focus{
+      background-position: left -124px;
+    }
+  }
 }
