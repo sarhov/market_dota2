@@ -245,14 +245,14 @@ body{
     background:transparent url('../img/socials.png') left top no-repeat;
     &_fb{
      background-position: -39px 0;
-    }
-    &_twitter{
+   }
+   &_twitter{
      background-position: -77px 0;
-    }
-    &:hover{
-      opacity: 0.8;
-    }
+   }
+   &:hover{
+    opacity: 0.8;
   }
+}
 }
 
 .b-main{
@@ -367,6 +367,7 @@ body{
   border-radius: 4px;
   background:#fafafa;
   border: 1px solid #eaeaea;
+  float: left;
   &__title{
     color: #353535;
     font-size: 14px;
@@ -412,4 +413,40 @@ body{
   color: #555555;
   top: -10px;
   font-weight: normal;
+}
+
+.b-search{
+  &__wrap{
+    position: relative;
+  }
+  @extend .b-price-filter;
+  float: right;
+  margin-top: 5px;
+  padding: 10px;
+  line-height: 1;
+  &__input-text{
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background:#eaeaea;
+    height: 44px;
+    width: 100%;
+    line-height: 44;
+    padding: 0 5px;
+    padding-right: 80px;
+  }
+  &__input-submit{
+    background: url("../img/search-submit-bg.png") no-repeat scroll left center #97b807;
+    border: medium none;
+    border-radius: 0 4px 4px 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    height: 44px;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 77px;
+    @extend .unisans;
+    @extend .sharp;
+  }
 }

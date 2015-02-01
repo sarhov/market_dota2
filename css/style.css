@@ -29,7 +29,7 @@
   font-style: normal;
 }
 /* line 25, ../sass/style.scss */
-.unisans, .b-navigation {
+.unisans, .b-navigation, .b-search__input-submit {
   font-family: unisans, sans;
 }
 
@@ -85,7 +85,7 @@ a {
 }
 
 /* line 73, ../sass/style.scss */
-.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title {
+.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -411,15 +411,16 @@ body {
 }
 
 /* line 363, ../sass/style.scss */
-.b-price-filter {
+.b-price-filter, .b-search {
   width: 400px;
   overflow: hidden;
   padding: 4px 10px 15px 10px;
   border-radius: 4px;
   background: #fafafa;
   border: 1px solid #eaeaea;
+  float: left;
 }
-/* line 370, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 .b-price-filter__title {
   color: #353535;
   font-size: 14px;
@@ -428,12 +429,12 @@ body {
   padding-bottom: 6px;
   margin-bottom: 6px;
 }
-/* line 379, ../sass/style.scss */
+/* line 380, ../sass/style.scss */
 .b-price-filter__content {
   padding-top: 20px;
 }
 
-/* line 384, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .handler-price {
   bottom: 25px;
   font-size: 11px;
@@ -444,7 +445,7 @@ body {
   width: 110px;
 }
 
-/* line 394, ../sass/style.scss */
+/* line 395, ../sass/style.scss */
 .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
   background: none repeat scroll 0 0 #515151;
   border: medium none;
@@ -453,13 +454,13 @@ body {
   height: 8px;
 }
 
-/* line 402, ../sass/style.scss */
+/* line 403, ../sass/style.scss */
 .ui-slider-range.ui-widget-header {
   background: none repeat scroll 0 0 #92b305;
   box-shadow: 1px 1px 1px #333333 inset;
 }
 
-/* line 407, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: url("../img/price-spinner.png") center top no-repeat;
   border: none;
@@ -468,4 +469,41 @@ body {
   color: #555555;
   top: -10px;
   font-weight: normal;
+}
+
+/* line 418, ../sass/style.scss */
+.b-search {
+  float: right;
+  margin-top: 5px;
+  padding: 10px;
+  line-height: 1;
+}
+/* line 419, ../sass/style.scss */
+.b-search__wrap {
+  position: relative;
+}
+/* line 427, ../sass/style.scss */
+.b-search__input-text {
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  background: #eaeaea;
+  height: 44px;
+  width: 100%;
+  line-height: 44;
+  padding: 0 5px;
+  padding-right: 80px;
+}
+/* line 437, ../sass/style.scss */
+.b-search__input-submit {
+  background: url("../img/search-submit-bg.png") no-repeat scroll left center #97b807;
+  border: medium none;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  height: 44px;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 77px;
 }
