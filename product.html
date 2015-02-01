@@ -12,7 +12,7 @@ layout: default
       <h1 class="b-product__title">Treasure Key</h1>
       <!-- /.b-product__title -->
       <div class="b-product__description">
-        Treasure Key
+        <span class="b-product__subtitle">Treasure Key</span>
         <p>
           Отпирает Treasure Chest. Нажмите два раза или кликните правой кнопкой мыши на ключ в вашем арсенале и выберите сокровищницу, которую вы хотите открыть. 
         </p>
@@ -23,7 +23,7 @@ layout: default
       </div>
       <!-- /.b-product__note -->
       <div class="b-product__action">
-        <a href="#" class="button button_small">
+        <a href="#" class="button button_small button_round">
           Купить за
           <span class="b-product__price">141 руб.</span>
         </a>
@@ -33,5 +33,27 @@ layout: default
     <!-- /.b-product__info -->
   </div>
   <!-- /.b-product -->
+  <div class="b-more-items">
+    <div class="b-more-items__title">
+      <span class="b-more-items__title-text">
+        ПОХОЖИЕ ПРЕДМЕТЫ
+      </span>
+    </div>
+    <!-- /.b-more-items__title -->
+    <div class="b-more-items__content clearfix">
+      {% for item in (1..3) %}
+      <div class="b-small-item">
+        <a href="" class="b-small-item__link">
+          <img src="{{site.baseurl}}img/small-item.png" alt="" class="b-small-item__img">
+          <span class="b-small-item__price">46 руб</span>
+          <span class="b-small-item__time">Сегодня 18:11</span>
+        </a>
+      </div>
+      <!-- /.b-small-item -->
+      {% endfor %}
+    </div>
+    <!-- /.b-more-items__content -->
+  </div>
+  <!-- /.b-more-items -->
 </div>
 <!-- /.b-content -->

@@ -598,6 +598,7 @@ body{
 }
 
 .b-product{
+  margin-bottom: 15px;
   &__image{
     float: left;
     width: 444px;
@@ -615,8 +616,98 @@ body{
   }
   &__description{
     border-top: 5px solid #e8e8e8;
-    min-height: 140px;
+    padding: 10px 10px 10px 10px;
+    min-height: 119px;
     background:transparent url('../img/description-bg.png') left top repeat-x;
+  }
+  &__subtitle{
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 1;
+  }
+  &__note{
+    color: #8aaa05;
+    font-size: 14px;
+    margin-bottom: 18px;
+    padding: 0 5px;
+  }
+  &__action .button{
+    text-transform: uppercase;
+    width: auto;
+    padding: 0 6px;
   }
 }
 
+.b-more-items{
+  margin-bottom: 20px;
+  &__title{
+    margin-bottom: 15px;
+  }
+  &__title-text{
+    @extend .unisans;
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px 0 15px;
+    @extend .sharp;
+    height: 34px;
+    font-size: 24px;
+    width: 280px;
+    border-radius: 0 3px 3px 0;
+    overflow: hidden;
+    line-height: 34px;
+    background:transparent url('../img/more-items-bg.png') left top no-repeat;
+  }
+  &__content{
+    padding: 0 10px 10px 20px;
+  }
+}
+
+.b-small-item{
+  float: left;
+  width: 94px;
+  height: 62px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px #444;
+  border:1px solid #000 ;
+  @include transition(opacity 0.2s);
+  &:hover{
+    opacity: 0.8;
+  }
+  &__link{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background:#424242;
+  }
+  &__img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    top:0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &__price, &__time{
+    color: #f5d541;
+    font-size:10px;
+    position: absolute;
+    line-height: 1;
+    font-weight: bold;
+    @extend .sharp;
+  }
+  &__price{
+    left: 3px;
+    top: 3px
+  }
+  &__time{
+    left: 7px;
+    bottom: 7px
+  }
+}
