@@ -85,7 +85,7 @@ a {
 }
 
 /* line 73, ../sass/style.scss */
-.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title {
+.sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -325,9 +325,10 @@ body {
 .b-content {
   float: right;
   width: 920px;
+  padding: 10px 65px 20px 0;
 }
 
-/* line 288, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .b-widget__title {
   padding: 8px 10px;
   background: #efefef;
@@ -345,7 +346,7 @@ body {
   font-size: 12px;
   line-height: 1;
 }
-/* line 305, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .b-widget__title:after {
   content: '';
   float: right;
@@ -355,45 +356,45 @@ body {
   margin-right: -6px;
   background: transparent url("../img/widget-bg.png") center center no-repeat;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .b-widget__content {
   padding: 13px 12px 12px 12px;
   line-height: 1;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .b-widget_banner {
   border-top: 1px solid #eaeaea;
 }
 
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .b-banner__img {
   max-width: 100%;
 }
 
-/* line 330, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .b-filter-list {
   list-style-type: none;
   font-size: 12px;
   color: #464646;
   text-align: left;
 }
-/* line 335, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 .b-filter-list__item {
   margin-bottom: 7px;
 }
-/* line 338, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .b-filter-list__input-radio {
   display: none;
 }
-/* line 340, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 .b-filter-list__input-radio:checked + label:before {
   box-shadow: 0 0 1px 2px #483f3f inset;
 }
-/* line 344, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .b-filter-list__label {
   cursor: pointer;
 }
-/* line 345, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 .b-filter-list__label:before {
   content: '';
   display: inline-block;
@@ -404,7 +405,67 @@ body {
   margin-right: 6px;
   box-shadow: inset 1px 1px 2px #868686;
 }
-/* line 355, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .b-filter-list__label:hover:before {
   box-shadow: 0 0 1px 2px #483f3f inset;
+}
+
+/* line 363, ../sass/style.scss */
+.b-price-filter {
+  width: 400px;
+  overflow: hidden;
+  padding: 4px 10px 15px 10px;
+  border-radius: 4px;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+}
+/* line 370, ../sass/style.scss */
+.b-price-filter__title {
+  color: #353535;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+  line-height: 1;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+/* line 379, ../sass/style.scss */
+.b-price-filter__content {
+  padding-top: 20px;
+}
+
+/* line 384, ../sass/style.scss */
+.handler-price {
+  bottom: 25px;
+  font-size: 11px;
+  left: 50%;
+  margin-left: -55px;
+  position: absolute;
+  text-align: center;
+  width: 110px;
+}
+
+/* line 394, ../sass/style.scss */
+.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+  background: none repeat scroll 0 0 #515151;
+  border: medium none;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px #000000 inset;
+  height: 8px;
+}
+
+/* line 402, ../sass/style.scss */
+.ui-slider-range.ui-widget-header {
+  background: none repeat scroll 0 0 #92b305;
+  box-shadow: 1px 1px 1px #333333 inset;
+}
+
+/* line 407, ../sass/style.scss */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: url("../img/price-spinner.png") center top no-repeat;
+  border: none;
+  width: 24px;
+  height: 30px;
+  color: #555555;
+  top: -10px;
+  font-weight: normal;
 }

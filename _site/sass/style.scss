@@ -282,6 +282,7 @@ body{
 .b-content{
   float: right;
   width: 920px;
+  padding: 10px 65px 20px 0;
 }
 
 .b-widget{
@@ -357,4 +358,58 @@ body{
     }
     cursor: pointer;
   }
+}
+
+.b-price-filter{
+  width: 400px;
+  overflow: hidden;
+  padding:4px 10px 15px 10px;
+  border-radius: 4px;
+  background:#fafafa;
+  border: 1px solid #eaeaea;
+  &__title{
+    color: #353535;
+    font-size: 14px;
+    @extend .sharp;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 1;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+  &__content{
+    padding-top: 20px;
+  }
+}
+
+.handler-price {
+  bottom: 25px;
+  font-size: 11px;
+  left: 50%;
+  margin-left: -55px;
+  position: absolute;
+  text-align: center;
+  width: 110px;
+}
+
+.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+  background: none repeat scroll 0 0 #515151;
+  border: medium none;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px #000000 inset;
+  height: 8px;
+}
+
+.ui-slider-range.ui-widget-header {
+  background: none repeat scroll 0 0 #92b305;
+  box-shadow: 1px 1px 1px #333333 inset;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: url("../img/price-spinner.png") center top no-repeat;
+  border: none;
+  width: 24px;
+  height: 30px;
+  color: #555555;
+  top: -10px;
+  font-weight: normal;
 }

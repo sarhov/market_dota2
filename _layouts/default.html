@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>{% if page.title %} {{page.title}} | {{site.title}} {% else %} {{site.title}} {% endif %}</title>
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="{{site.baseurl}}css/style.css">
 </head>
 <body>
@@ -150,14 +153,69 @@
       </div>
       <!-- /.b-sidebar -->
       <div class="b-content">
-        <div class="b-content-bar">
+        <div class="b-content-bar clearfix">
           <div class="b-price-filter">
             <form action=""><div class="b-price-filter__title">
-              Сортировать по центер
+              Сортировать по ценe
             </div>
             <!-- b-price-filter__title -->
             <div class="b-price-filter__content">
+                <div class="price-filter">
+                  <div class="price-range">
+                    <!--   <span class="min-price"></span><span class="max-price"></span>-->
 
+                    <input  placeholder="Цена от" class="  price-range-input" type="hidden" name="price_min" id="min-price" value="600" />
+                    <input placeholder="до"  class="price-range-input" type="hidden" name="price_max " id="max-price" value="1500" />
+                  </div>
+                  <!-- ./price-range -->
+
+                  <div id="slider-range"></div>
+                </div>
+                <!-- ./price-filter -->
+                <script>
+                  function pricerange(minprice, maxprice) {
+                    $("#slider-range").slider({
+                      range: true,
+                      min: 0,
+                      max: 5000,
+                      values: [minprice, maxprice],
+                      slide: function(event, ui) {
+                        $('#handPriceMin').text(ui.values[0] + ' RUB');
+                        $('#handPriceMax').text(ui.values[1] + ' RUB'); 
+                        $('#min-price').val(ui.values[0]);
+                        $('#max-price').val(ui.values[1]);
+
+                      },
+                      stop: function(event, ui) {
+                        $('#characteristics').submit();
+                      }
+                    });
+                    var handleprice = $('.handler-price');
+                    if (handleprice.length > 0) {
+                      console.log('found')
+                    } else {
+                      $('.ui-slider-handle:last-child').append('<span class="handler-price" id="handPriceMax"> RUB</span>');
+                      $('.ui-slider-handle:nth-child(2)').append('<span class="handler-price" id="handPriceMin"> RUB</span>');
+                      console.log('not-found')
+                    }
+
+
+                    $('#handPriceMin').text($("#slider-range").slider("values", 0)+ ' RUB');
+                    $('#handPriceMax').text($("#slider-range").slider("values", 1) + ' RUB');
+                    $('#min-price').val($("#slider-range").slider("values", 0));
+                    $('#max-price').val($("#slider-range").slider("values", 1));
+
+                  }
+
+                  pricerange(685, 2799);
+
+                  $('.price-range-input').keyup(function() {
+                    // alert('yes')
+                    var min = $('#min-price').val()
+                    var max = $('#max-price').val()
+                    pricerange(min, max)
+                  });
+                </script>
             </div>
             <!-- /.b-price-filter__content -->
           </form>
