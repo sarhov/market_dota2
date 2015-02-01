@@ -42,6 +42,10 @@ figure{
   text-align: center;
 }
 
+.upp{
+  text-transform: uppercase;
+}
+
 .button{
   width: 130px;
   height: 30px;
@@ -109,19 +113,19 @@ figure{
 }
 
 ::-webkit-input-placeholder {
- color: #fff;
+ color: #909090;
 }
 
 :-moz-placeholder { /* Firefox 18- */
- color: #fff;  
+ color: #909090;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
- color: #fff;  
+ color: #909090;  
 }
 
 :-ms-input-placeholder {  
- color: #fff;  
+ color: #909090;  
 }
 
 [class*="input-text"]{
@@ -136,6 +140,7 @@ figure{
   border: none;
   min-width: 180px;
 }
+
 
 
 
@@ -262,6 +267,7 @@ body{
     height: 100%;
     @extend .sharp;
     font-size: 15px;
+    color: #fff;
     text-transform: uppercase;
     padding: 10px 0 0 10px;
     background:transparent url('../img/marquee-title-bg.png') left center no-repeat;
@@ -785,6 +791,9 @@ body{
     @extend .unisans;
     border-radius: 0 4px 4px 0;
     background:transparent url('../img/page-title-bg.png') left top no-repeat;
+  &_white{
+    color: #fff;
+  }
   }
 }
 
@@ -839,6 +848,14 @@ body{
     width: 445px;
     padding-right: 50px;
   }
+  &_support{
+    clear: both;
+    color: #1a1a1a;
+    padding-top: 8px;
+    p{
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .b-form{
@@ -855,15 +872,27 @@ body{
     color: #8a8a8a;
   }
   &__input-text{
+    color: #909090;
     &_url{
       width: 100%;
     }
+  }
+  &__input-textarea{
+    color: #909090;
+    height: 60px;
+    width: 100%;
+    padding: 5px;
   }
   &__note-link{
     color: inherit;
     text-decoration: underline;
     &:hover{
       text-decoration: none;
+    }
+  }
+  @at-root .b-form_support &{
+    &__line{
+      margin-bottom: 15px;
     }
   }
 }
@@ -919,4 +948,36 @@ body{
 .list-default{
   list-style-type: decimal;
   list-style-position: inside;;
+}
+
+.b-content__left{
+  float: left;
+  width: 510px;
+}
+
+.b-content__right{
+  float: right;
+  width: 400px;
+}
+
+.b-form__big-title{
+    width: 300px;
+    height: 80px;
+    padding-left: 90px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background:transparent url('../img/support-bg.png') left center no-repeat;
+    span{
+      display: block;
+      // @extend .sharp;
+      @extend .unisans;
+    }
+    &-big{
+      color: #e75757;
+      font-size: 24px;
+    }
+    &-small{
+      color: #c2c2c2;
+      font-size: 14px;
+    }
 }
