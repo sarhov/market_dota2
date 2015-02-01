@@ -29,7 +29,7 @@
   font-style: normal;
 }
 /* line 25, ../sass/style.scss */
-.unisans, .b-navigation, .b-search__input-submit, .b-item__price, .b-payments__title {
+.unisans, .b-navigation, .b-search__input-submit, .b-item__price, .b-payments__title, .b-product__title {
   font-family: unisans, sans;
 }
 
@@ -44,11 +44,16 @@ a {
 }
 
 /* line 37, ../sass/style.scss */
+figure {
+  margin: 0;
+}
+
+/* line 41, ../sass/style.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .button {
   width: 130px;
   height: 30px;
@@ -61,72 +66,73 @@ a {
   font-size: 12px;
   border: none;
 }
-/* line 54, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .button:hover {
   background-position: 0 -32px;
 }
-/* line 57, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .button:active, .button:focus {
   background-position: 0 -64px;
 }
-/* line 60, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .button_round {
   border-radius: 3px;
   overflow: hidden;
   background: #97b905 url("../img/buttons.png") -155px top no-repeat;
 }
-/* line 64, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .button_round:hover {
   background-position: -155px -32px;
 }
-/* line 67, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .button_round:active, .button_round:focus {
   background-position: -155px -64px;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .sharp, .button, .b-navigation__link, .b-marquee__title, .b-marquee__text, .b-widget__title, .b-price-filter__title, .b-search__input-submit, .b-item__title, .b-item__subtitle, .b-item__price, .b-copy__text {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 76, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 ::-webkit-input-placeholder {
   color: #fff;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
 }
 
-/* line 84, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 :-ms-input-placeholder {
   color: #fff;
 }
 
-/* line 112, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 html {
   height: 100%;
   overflow: auto;
 }
 
-/* line 117, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 body {
   min-height: 100%;
   font-family: Tahoma, sans;
+  font-size: 12px;
+  color: #1a1a1a;
   background: #6f6c67 url("../img/bg.png") center top/cover;
-  color: #fff;
   padding: 30px 0 17px 0;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .b-wrap {
   min-height: 100%;
   width: 1198px;
@@ -135,30 +141,30 @@ body {
   background: #fff;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .b-top-bar {
   height: 66px;
   background: transparent url("../img/top-bar-bg.png") center top no-repeat;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .b-logo {
   float: left;
   padding: 15px 0 0 12px;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .b-navigation {
   float: left;
   margin-left: 50px;
   padding-top: 25px;
 }
-/* line 150, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .b-navigation__item {
   margin-right: 15px;
   float: left;
 }
-/* line 153, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 .b-navigation__item:not(:first-child):before {
   content: ' ';
   display: inline-block;
@@ -167,39 +173,39 @@ body {
   margin-right: 10px;
   background: transparent url("../img/dottes.png") center center no-repeat;
 }
-/* line 162, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .b-navigation__link {
   color: #fff;
   text-decoration: none;
 }
-/* line 166, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 .b-navigation__link:hover {
   color: #e6e6e6;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 .b-login {
   float: right;
   margin-right: 1px;
   margin-top: 3px;
 }
-/* line 176, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .b-login__link {
   display: block;
   width: 139px;
   height: 62px;
   background: transparent url("../img/login.png") left top no-repeat;
 }
-/* line 181, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .b-login__link:hover {
   background-position: left -62px;
 }
-/* line 184, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .b-login__link:active, .b-login__link:focus {
   background-position: left -124px;
 }
 
-/* line 190, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .b-bar {
   background: #f3f3f3;
   height: 40px;
@@ -230,12 +236,12 @@ body {
     text-indent: -100%;
   }
 }
-/* line 206, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .b-marquee {
   height: 100%;
   float: left;
 }
-/* line 210, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 .b-marquee__title {
   width: 110px;
   float: left;
@@ -245,7 +251,7 @@ body {
   padding: 10px 0 0 10px;
   background: transparent url("../img/marquee-title-bg.png") left center no-repeat;
 }
-/* line 220, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .b-marquee__block {
   width: 600px;
   overflow: hidden;
@@ -254,7 +260,7 @@ body {
   height: 100%;
   line-height: 40px;
 }
-/* line 229, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .b-marquee__text {
   font-size: 12px;
   -moz-animation: marquee 17s linear infinite;
@@ -263,13 +269,13 @@ body {
   color: #707070;
 }
 
-/* line 237, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .b-social {
   float: right;
   padding-right: 3px;
   padding-top: 1px;
 }
-/* line 241, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .b-social__link {
   float: right;
   margin-left: 3px;
@@ -281,24 +287,24 @@ body {
   transition: opacity 0.2s;
   background: transparent url("../img/socials.png") left top no-repeat;
 }
-/* line 248, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .b-social__link_fb {
   background-position: -39px 0;
 }
-/* line 251, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 .b-social__link_twitter {
   background-position: -77px 0;
 }
-/* line 254, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 .b-social__link:hover {
   opacity: 0.8;
 }
 
-/* line 260, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .b-main {
   position: relative;
 }
-/* line 262, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .b-main:before {
   content: '';
   width: 220px;
@@ -311,7 +317,7 @@ body {
   z-index: 1;
 }
 
-/* line 275, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .b-sidebar {
   width: 220px;
   float: left;
@@ -321,14 +327,19 @@ body {
   padding-bottom: 100px;
 }
 
-/* line 284, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .b-content {
   float: right;
+  width: 978px;
+  padding: 15px 30px 20px 20px;
+}
+/* line 293, ../sass/style.scss */
+.b-content_index {
   width: 920px;
-  padding: 10px 65px 20px 0;
+  padding: 15px  66px 20px 0;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .b-widget__title {
   padding: 8px 10px;
   background: #efefef;
@@ -346,7 +357,7 @@ body {
   font-size: 12px;
   line-height: 1;
 }
-/* line 308, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 .b-widget__title:after {
   content: '';
   float: right;
@@ -356,45 +367,45 @@ body {
   margin-right: -6px;
   background: transparent url("../img/widget-bg.png") center center no-repeat;
 }
-/* line 318, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .b-widget__content {
   padding: 13px 12px 12px 12px;
   line-height: 1;
 }
-/* line 322, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .b-widget_banner {
   border-top: 1px solid #eaeaea;
 }
 
-/* line 328, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .b-banner__img {
   max-width: 100%;
 }
 
-/* line 333, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .b-filter-list {
   list-style-type: none;
   font-size: 12px;
   color: #464646;
   text-align: left;
 }
-/* line 338, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .b-filter-list__item {
   margin-bottom: 7px;
 }
-/* line 341, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .b-filter-list__input-radio {
   display: none;
 }
-/* line 343, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .b-filter-list__input-radio:checked + label:before {
   box-shadow: 0 0 1px 2px #483f3f inset;
 }
-/* line 347, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .b-filter-list__label {
   cursor: pointer;
 }
-/* line 348, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 .b-filter-list__label:before {
   content: '';
   display: inline-block;
@@ -405,12 +416,12 @@ body {
   margin-right: 6px;
   box-shadow: inset 1px 1px 2px #868686;
 }
-/* line 358, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .b-filter-list__label:hover:before {
   box-shadow: 0 0 1px 2px #483f3f inset;
 }
 
-/* line 365, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .b-price-filter, .b-search {
   width: 400px;
   overflow: hidden;
@@ -420,7 +431,7 @@ body {
   border: 1px solid #eaeaea;
   float: left;
 }
-/* line 373, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .b-price-filter__title {
   color: #353535;
   font-size: 14px;
@@ -429,12 +440,12 @@ body {
   padding-bottom: 6px;
   margin-bottom: 6px;
 }
-/* line 382, ../sass/style.scss */
+/* line 391, ../sass/style.scss */
 .b-price-filter__content {
   padding-top: 20px;
 }
 
-/* line 387, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .handler-price {
   bottom: 25px;
   font-size: 11px;
@@ -445,7 +456,7 @@ body {
   width: 110px;
 }
 
-/* line 397, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
   background: none repeat scroll 0 0 #515151;
   border: medium none;
@@ -454,13 +465,13 @@ body {
   height: 8px;
 }
 
-/* line 405, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .ui-slider-range.ui-widget-header {
   background: none repeat scroll 0 0 #92b305;
   box-shadow: 1px 1px 1px #333333 inset;
 }
 
-/* line 410, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: url("../img/price-spinner.png") center top no-repeat;
   border: none;
@@ -471,18 +482,18 @@ body {
   font-weight: normal;
 }
 
-/* line 420, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 .b-search {
   float: right;
   margin-top: 5px;
   padding: 10px;
   line-height: 1;
 }
-/* line 421, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .b-search__wrap {
   position: relative;
 }
-/* line 429, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
 .b-search__input-text {
   border: 1px solid #dadada;
   border-radius: 3px;
@@ -493,7 +504,7 @@ body {
   padding: 0 5px;
   padding-right: 80px;
 }
-/* line 439, ../sass/style.scss */
+/* line 448, ../sass/style.scss */
 .b-search__input-submit {
   background: url("../img/search-submit-bg.png") no-repeat scroll left center #97b807;
   border: medium none;
@@ -508,14 +519,14 @@ body {
   width: 77px;
 }
 
-/* line 456, ../sass/style.scss */
+/* line 465, ../sass/style.scss */
 .b-items-wrap {
   padding-top: 15px;
   margin-left: -55px;
   padding-bottom: 25px;
 }
 
-/* line 462, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 .b-item {
   width: 172px;
   margin-left: 55px;
@@ -528,13 +539,13 @@ body {
   margin-bottom: 25px;
   position: relative;
 }
-/* line 473, ../sass/style.scss */
+/* line 482, ../sass/style.scss */
 .b-item__image {
   height: 105px;
   position: relative;
   margin: 0;
 }
-/* line 478, ../sass/style.scss */
+/* line 487, ../sass/style.scss */
 .b-item__img {
   position: absolute;
   left: 0;
@@ -545,11 +556,11 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 488, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .b-item__main-link {
   text-decoration: none;
 }
-/* line 491, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .b-item__title {
   background: #e75757;
   text-align: center;
@@ -561,7 +572,7 @@ body {
   color: #fff;
   font-size: 12px;
 }
-/* line 503, ../sass/style.scss */
+/* line 512, ../sass/style.scss */
 .b-item__subtitle {
   height: 30px;
   position: absolute;
@@ -577,7 +588,7 @@ body {
   padding: 4px 2px 1px;
   z-index: 2;
 }
-/* line 519, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 .b-item__price {
   position: absolute;
   bottom: 40px;
@@ -587,11 +598,11 @@ body {
   z-index: 2;
 }
 
-/* line 532, ../sass/style.scss */
+/* line 541, ../sass/style.scss */
 .b-more {
   text-align: center;
 }
-/* line 534, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 .b-more__link {
   width: 300px;
   height: 50px;
@@ -600,16 +611,16 @@ body {
   text-indent: -9999px;
   background: transparent url("../img/more-bg.png") left top no-repeat;
 }
-/* line 541, ../sass/style.scss */
+/* line 550, ../sass/style.scss */
 .b-more__link:hover {
   background-position: 0 -52px;
 }
-/* line 544, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 .b-more__link:active, .b-more__link:focus {
   background-position: 0 -104px;
 }
 
-/* line 550, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 .b-footer {
   height: 195px;
   background: #1a1a1a;
@@ -617,11 +628,11 @@ body {
   padding: 10px 23px 0 23px;
 }
 
-/* line 557, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 .b-payments {
   margin-bottom: 13px;
 }
-/* line 559, ../sass/style.scss */
+/* line 568, ../sass/style.scss */
 .b-payments__title {
   color: #fff;
   background: #2d2d2d;
@@ -633,7 +644,7 @@ body {
   font-size: 14px;
   margin-bottom: 15px;
 }
-/* line 571, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 .b-payments__link {
   text-decoration: none;
   margin-right: 16px;
@@ -642,18 +653,42 @@ body {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 575, ../sass/style.scss */
+/* line 584, ../sass/style.scss */
 .b-payments__link:hover {
   opacity: 0.8;
 }
 
-/* line 581, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .b-copy {
   padding-top: 13px;
   border-top: 1px solid #2d2d2d;
 }
-/* line 584, ../sass/style.scss */
+/* line 593, ../sass/style.scss */
 .b-copy__text {
   font-size: 12px;
   color: #787878;
+}
+
+/* line 601, ../sass/style.scss */
+.b-product__image {
+  float: left;
+  width: 444px;
+}
+/* line 605, ../sass/style.scss */
+.b-product__info {
+  width: 480px;
+  float: right;
+  padding-left: 25px;
+}
+/* line 610, ../sass/style.scss */
+.b-product__title {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+/* line 616, ../sass/style.scss */
+.b-product__description {
+  border-top: 5px solid #e8e8e8;
+  min-height: 140px;
+  background: transparent url("../img/description-bg.png") left top repeat-x;
 }
