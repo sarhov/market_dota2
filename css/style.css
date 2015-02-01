@@ -518,6 +518,7 @@ body {
 .b-item {
   width: 172px;
   margin-left: 55px;
+  border: 1px solid #eaeaea;
   float: left;
   height: 170px;
   overflow: hidden;
@@ -526,13 +527,13 @@ body {
   margin-bottom: 25px;
   position: relative;
 }
-/* line 469, ../sass/style.scss */
+/* line 470, ../sass/style.scss */
 .b-item__image {
   height: 105px;
   position: relative;
   margin: 0;
 }
-/* line 474, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .b-item__img {
   position: absolute;
   left: 0;
@@ -543,11 +544,11 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 484, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 .b-item__main-link {
   text-decoration: none;
 }
-/* line 487, ../sass/style.scss */
+/* line 488, ../sass/style.scss */
 .b-item__title {
   background: #e75757;
   text-align: center;
@@ -559,7 +560,7 @@ body {
   color: #fff;
   font-size: 12px;
 }
-/* line 499, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .b-item__subtitle {
   height: 30px;
   position: absolute;
@@ -575,7 +576,7 @@ body {
   padding: 4px 2px 1px;
   z-index: 2;
 }
-/* line 515, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 .b-item__price {
   position: absolute;
   bottom: 40px;
