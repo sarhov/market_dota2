@@ -467,9 +467,9 @@ body{
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  background: url("../img/price-spinner.png") center top no-repeat;
+  background: url("../img/price-spinner.png") -3px top no-repeat;
   border: none;
-  width: 24px;
+  width: 16px;
   height: 30px;
   color: #555555;
   top: -10px;
@@ -491,7 +491,7 @@ body{
     background:#eaeaea;
     height: 44px;
     width: 100%;
-    line-height: 44;
+    line-height: 44px;
     padding: 0 5px;
     padding-right: 80px;
   }
